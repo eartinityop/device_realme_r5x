@@ -156,9 +156,17 @@ vendor.display.comp_mask=0
 vendor.display.enable_optimize_refresh=1
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.disable_hw_recovery_dump=1
-debug.hwui.renderer=skiagl
-debug.renderengine.backend=skiaglthreaded
-renderthread.skia.reduceopstasksplitting=true
+ro.hardware.vulkan=adreno
+ro.hardware.egl=adreno
+ro.config.avoid_gfx_accel=true
+debug.sf.disable_client_composition_cache=1
+vendor.display.disable_skip_validate=1
+vendor.gralloc.disable_ubwc=0
+vendor.display.enable_default_color_mode=1
+vendor.gralloc.enable_fb_ubwc=1
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+debug.sf.enable_egl_image_tracker=1
 
 # DRM
 drm.service.enabled=true
