@@ -270,25 +270,29 @@ PRODUCT_PACKAGES += \
     fstab.qcom_ramdisk \
     fstab.qcom \
     init.class_main.sh \
-    init.oppo.face.rc \
-    init.oppo.face.sh \
-    init.oppo.fingerprints.rc \
     init.oppo.fingerprints.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.usb.sh \
+    init.qcom.sh \
+    set_baseband.sh \
+    init.oppo.fingerprints.rc \
     init.oppo.product.rc \
     init.oppo.reserve.rc \
     init.msm.usb.configfs.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.rc \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
     init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.recovery.qcom.rc \
     init.target.rc \
-    init.r5x.rc \
-    init.set_baseband.sh \
     ueventd.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
+
+# Improve performance
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 
 # IPv6
 PRODUCT_PACKAGES += \
