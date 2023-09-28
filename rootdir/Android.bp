@@ -49,7 +49,7 @@ sh_binary {
 
 sh_binary {
     name: "set_baseband.sh",
-    src: "bin/set_baseband.sh",
+    src: "bin/init.set_baseband.sh",
     vendor: true,
 }
 
