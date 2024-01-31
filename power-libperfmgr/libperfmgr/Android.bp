@@ -39,10 +39,6 @@ cc_defaults {
         "cert-*",
         "clang-analyzer-security*",
     ],
-    tidy_flags: [
-        "tidy_checks_as_errors = ["android-*", "clang-analyzer-security*", "cert-*"]
-
-    ],
 }
 
 cc_library {
